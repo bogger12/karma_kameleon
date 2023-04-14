@@ -20,7 +20,6 @@ public class GroundManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(latestGroundObject.transform.position.x.ToString());
         if (latestGroundObject.transform.position.x < 8) {
             spawnGround();
         };

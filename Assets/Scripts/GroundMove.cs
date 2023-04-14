@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class GroundMove : MonoBehaviour
 {
-    public float speed = 10;
     public float maxposx = -12;
 
     // Start is called before the first frame update
