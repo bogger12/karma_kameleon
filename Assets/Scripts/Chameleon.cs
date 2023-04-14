@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-enum Color {
+enum ChameleonColor {
     GREEN,
     BLUE
 }
@@ -17,12 +17,13 @@ public class Chameleon : MonoBehaviour
     public Sprite spriteGreen;
     public Sprite spriteBlue;
 
-    private Color colorstate = Color.GREEN;
+    private ChameleonColor colorstate = ChameleonColor.GREEN;
 
     // Start is called before the first frame update
     void Start()
     {
         spriteRenderer.sprite = spriteGreen;
+        
     }
 
     // Update is called once per frame
@@ -39,12 +40,12 @@ public class Chameleon : MonoBehaviour
     private void changeColor() {
         Sprite sprite_result = null;
         switch (colorstate) {
-            case Color.GREEN:
-                colorstate = Color.BLUE;
+            case ChameleonColor.GREEN:
+                colorstate = ChameleonColor.BLUE;
                 sprite_result = spriteBlue;
                 break;
-            case Color.BLUE:
-                colorstate = Color.GREEN;
+            case ChameleonColor.BLUE:
+                colorstate = ChameleonColor.GREEN;
                 sprite_result = spriteGreen;
                 break;
 

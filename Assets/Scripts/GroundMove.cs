@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class GroundMove : MonoBehaviour
 {
-    public float maxposx = -12;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +13,7 @@ public class GroundMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.x<maxposx) {
+        if (transform.position.x < GameSystem.maxposx) {
             Destroy(gameObject);
         }
     }
