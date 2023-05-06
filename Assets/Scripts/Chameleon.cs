@@ -12,6 +12,8 @@ public class Chameleon : MonoBehaviour
 {
     public Rigidbody2D ChameleonRigidBody;
     public float floatstrength = 10;
+    public AudioSource correctBlockSound;
+    public AudioSource deathSound;
 
     public SpriteRenderer spriteRenderer;
 
@@ -66,11 +68,17 @@ public class Chameleon : MonoBehaviour
                 GameSystem.addToScore(scoretext.GetComponent<TMP_Text>(), 1);
                 float speedincreaseonblockhit = 2;
                 GameSystem.changeSpeedBy(speedincreaseonblockhit);
+                correctBlockSound.Play();
             } else {
                 float speedincreaseonblockhit = 2;
                 GameSystem.changeSpeedBy(-speedincreaseonblockhit);
             }
             Debug.Log("collided with colorblock");
+        }
+        if (collision.gameObject.CompareTag("Monkey")) {
+            deathSound.Play();
+            GameSystem.gameEnd();
+            Debug.Log("collided with monkey");
         }
     }
 
