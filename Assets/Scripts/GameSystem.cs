@@ -55,5 +55,7 @@ public static class GameSystem
     public static void changeSpeedBy(float change) {
         speed += change;
     }
-    public static void gameEnd() {}
+    public static void gameEnd() {
+
+    }
 }

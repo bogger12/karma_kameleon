@@ -27,7 +27,7 @@ public class ButtonColourCycle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return)) {
+        if (visible && Input.GetKeyDown(KeyCode.Return)) {
             SceneManager.LoadScene("GameScene");
         }
         float colorpoint = (Time.time * speed) % 1;
