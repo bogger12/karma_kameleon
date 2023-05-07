@@ -45,6 +45,8 @@ public static class GameSystem
     public static GameObject gameOverLayer0;
     public static GameObject gameOverLayer1;
 
+    public static int sceneLength = 5;
+
 
     public static void moveChildren(GameObject gameobj, float distance) {
         foreach (Transform child in gameobj.transform) {
