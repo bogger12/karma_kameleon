@@ -22,8 +22,6 @@ public class Chameleon : MonoBehaviour
     public Color chameleonGreen;
     public Color chameleonBlue;
 
-    public GameObject scoretext;
-
     private ChameleonColor colorstate = ChameleonColor.GREEN;
 
     public Collider2D groundCollider;
@@ -71,7 +69,7 @@ public class Chameleon : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("collision occur");
+        //Debug.Log("collision occur");
         if (collision.gameObject.CompareTag("ColorBlock")) { 
             Color32 colorofcollision = collision.gameObject.GetComponent<ColorBlock>().color;
 
@@ -89,7 +87,7 @@ public class Chameleon : MonoBehaviour
                     break;
             }
             if (addpoint) {
-                GameSystem.addToScore(scoretext.GetComponent<TMP_Text>(), 1);
+                GameSystem.addToScore(10);
                 GameSystem.changeSpeedBy(GameSystem.speedincreaseonblockhit);
                 correctBlockSound.Play();
             } else {
@@ -98,12 +96,12 @@ public class Chameleon : MonoBehaviour
                 GameSystem.changeSpeedBy(-GameSystem.speedincreaseonblockhit);
                 }
             }
-            Debug.Log("collided with colorblock");
+            //Debug.Log("collided with colorblock");
         }
         if (collision.gameObject.CompareTag("Monkey")) {
             deathSound.Play();
             GameSystem.gameEnd();
-            Debug.Log("collided with monkey");
+            //Debug.Log("collided with monkey");
         }
     }
 

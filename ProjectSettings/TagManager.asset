@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ColorBlock
   - Monkey
+  - Fly
   layers:
   - Default
   - TransparentFX

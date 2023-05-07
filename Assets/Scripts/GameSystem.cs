@@ -40,7 +40,10 @@ public static class GameSystem
 
     public static float speed = 10; // speed that chameleon runs at
 
-    public static float speedincreaseonblockhit = 2f;
+    public static float speedincreaseonblockhit = 1f;
+
+
+    public static TMP_Text scoreTextMesh;
 
 
     public static void moveChildren(GameObject gameobj, float distance) {
@@ -50,9 +53,9 @@ public static class GameSystem
         }
     }
 
-    public static void addToScore(TMP_Text textMesh, int scoretoadd) {
+    public static void addToScore(int scoretoadd) {
         score += scoretoadd;
-        textMesh.text = string.Format("Score: {0}", score);
+        scoreTextMesh.text = string.Format("Score: {0}", score);
     }
 
     public static void changeSpeedBy(float change) {

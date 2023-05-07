@@ -22,7 +22,7 @@ public class GroundMove : MonoBehaviour
         SpriteRenderer spriteren = GetComponent<SpriteRenderer>();
         Color.RGBToHSV(spriteren.color, out float h, out float s, out float v);
 
-        v = 1f-Mathf.Abs((chameleon.transform.position - transform.position).magnitude/10);
+        v = 1f-Mathf.Abs((chameleon.transform.position - transform.position).magnitude/15);
         spriteren.color = Color.HSVToRGB(h, s, v);
     }
 }

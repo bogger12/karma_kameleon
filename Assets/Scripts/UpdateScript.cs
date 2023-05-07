@@ -2,9 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using TMPro;
 
 public class UpdateScript : MonoBehaviour
 {
+    public TMP_Text scoretext;
+
+    void Start()
+    {
+        GameSystem.scoreTextMesh = scoretext; 
+    }
 
     // Update is called once per frame
     void Update()
