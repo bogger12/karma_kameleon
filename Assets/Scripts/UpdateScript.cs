@@ -12,6 +12,6 @@ public class UpdateScript : MonoBehaviour
         float speeddecreasepersecond = 0.5f;
 
         GameSystem.changeSpeedBy(-speeddecreasepersecond * Time.deltaTime);
-        Debug.Log(GameSystem.speed);
+        //Debug.Log(GameSystem.speed);
     }
 }
