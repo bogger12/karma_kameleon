@@ -7,13 +7,13 @@ public struct BlockColors {
     //public readonly Color32 green;
 
     public static Color32 green {
-        get { return new Color32(54, 227, 66, 255); }
+        get { return new Color32(54, 227, 66, 140); }
     }
     public static Color32 blue {
-        get { return new Color32(54, 227, 192, 255); }
+        get { return new Color32(54, 227, 192, 100); }
     }
     public static Color32 black {
-        get { return new Color32(0, 0, 0, 255); }
+        get { return new Color32(0, 0, 0, 50); }
     }
 
     public static Color32 get(int index) {
@@ -39,6 +39,8 @@ public static class GameSystem
     public static bool gameIsOver = false;
 
     public static float speed = 10; // speed that chameleon runs at
+
+    public static float speedincreaseonblockhit = 2f;
 
 
     public static void moveChildren(GameObject gameobj, float distance) {

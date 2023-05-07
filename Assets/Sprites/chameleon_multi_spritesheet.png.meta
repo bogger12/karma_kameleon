@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f6b38c78b0654424bb4cd1df777711d8
+guid: c2dc3e0ad59b14ef0a9fa26e3193c107
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: chameleon_spritesheet_0
+      name: chameleon_multi_spritesheet_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 140
-        width: 77
-        height: 28
+        y: 35
+        width: 80
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c73cd053ee1644016a774215b3977265
-      internalID: -674976041
+      spriteID: 870fbc90a265c48ddbf33f294a827af5
+      internalID: 80817135
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chameleon_spritesheet_1
+      name: chameleon_multi_spritesheet_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 112
-        width: 77
-        height: 28
+        x: 80
+        y: 35
+        width: 80
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff840340228dd43a2a8f0694c41dd2aa
-      internalID: 569029887
+      spriteID: cccf8b70662c54527a1bc010f9e0a312
+      internalID: 2137369422
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chameleon_spritesheet_2
+      name: chameleon_multi_spritesheet_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 84
-        width: 77
-        height: 28
+        x: 160
+        y: 35
+        width: 80
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c71f0b81cb2cc492ead4a116d27d3671
-      internalID: 275447851
+      spriteID: 5d795950fd55b4bb381199d341856aaa
+      internalID: 1410890149
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chameleon_spritesheet_3
+      name: chameleon_multi_spritesheet_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 56
-        width: 77
-        height: 28
+        x: 240
+        y: 35
+        width: 80
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,20 +194,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b089d728782b04a8188c1cbba99b3d08
-      internalID: 1682382415
+      spriteID: b9b1f34a357fd4790acc59a30a5895a7
+      internalID: 1812713132
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chameleon_spritesheet_4
+      name: chameleon_multi_spritesheet_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 28
-        width: 77
-        height: 28
+        x: 320
+        y: 35
+        width: 80
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,20 +215,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb366c3c443704a6290cc0b212349ab6
-      internalID: 1329445348
+      spriteID: bd7ff3dfb91a2418c96be3cd29c192b5
+      internalID: -722920678
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chameleon_spritesheet_5
+      name: chameleon_multi_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 35
+        width: 80
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e761c78668e674e6ab503820c30c6c16
+      internalID: -1695485650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chameleon_multi_spritesheet_6
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 77
-        height: 28
+        width: 80
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,8 +257,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d73808a5a14f947afb585def0f7d4415
-      internalID: -563300856
+      spriteID: e787078b81d4c48cf98c038b97827b0b
+      internalID: -319439012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chameleon_multi_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 80
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 257f662864b9742f58cce0eacb8cec2e
+      internalID: 1203790489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chameleon_multi_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 80
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9831f5c7c6a694cb3bc0aec7feeb53b0
+      internalID: -1665878255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chameleon_multi_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 80
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dadfa44491c7748e4b2a9a78ecf78be8
+      internalID: 947616410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chameleon_multi_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 80
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c9c99ea569b5458496cba63fb734b5e
+      internalID: -967506108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chameleon_multi_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 80
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7ba8da4b5b194166bd0b25a8be672d2
+      internalID: 1217250206
       vertices: []
       indices: 
       edges: []
@@ -253,12 +379,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      chameleon_spritesheet_0: -674976041
-      chameleon_spritesheet_1: 569029887
-      chameleon_spritesheet_2: 275447851
-      chameleon_spritesheet_3: 1682382415
-      chameleon_spritesheet_4: 1329445348
-      chameleon_spritesheet_5: -563300856
+      chameleon_multi_spritesheet_0: 80817135
+      chameleon_multi_spritesheet_1: 2137369422
+      chameleon_multi_spritesheet_10: -967506108
+      chameleon_multi_spritesheet_11: 1217250206
+      chameleon_multi_spritesheet_2: 1410890149
+      chameleon_multi_spritesheet_3: 1812713132
+      chameleon_multi_spritesheet_4: -722920678
+      chameleon_multi_spritesheet_5: -1695485650
+      chameleon_multi_spritesheet_6: -319439012
+      chameleon_multi_spritesheet_7: 1203790489
+      chameleon_multi_spritesheet_8: -1665878255
+      chameleon_multi_spritesheet_9: 947616410
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
