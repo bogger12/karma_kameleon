@@ -42,6 +42,9 @@ public static class GameSystem
 
     public static float speedincreaseonblockhit = 2f;
 
+    public static GameObject gameOverLayer0;
+    public static GameObject gameOverLayer1;
+
 
     public static void moveChildren(GameObject gameobj, float distance) {
         foreach (Transform child in gameobj.transform) {
@@ -61,5 +64,9 @@ public static class GameSystem
     public static void gameEnd() {
         speed = 0;
         gameIsOver = true;
+        gameOverLayer0 = GameObject.FindGameObjectWithTag("GameOverL0");
+        gameOverLayer1 = GameObject.FindGameObjectWithTag("GameOverL1");
+        gameOverLayer0.GetComponent<SpriteRenderer>().enabled = true;
+        gameOverLayer1.GetComponent<SpriteRenderer>().enabled = true;
     }
 }

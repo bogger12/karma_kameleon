@@ -17,6 +17,8 @@ public class UpdateScript : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.R)) { // Reload to start
            SceneManager.LoadScene("GameScene");
+           GameSystem.gameIsOver = false;
+           GameSystem.speed = 10;
         }
     }
 }
