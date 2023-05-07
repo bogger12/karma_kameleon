@@ -71,7 +71,9 @@ public class Chameleon : MonoBehaviour
                 correctBlockSound.Play();
             } else {
                 float speedincreaseonblockhit = 2;
+                if (GameSystem.speed > speedincreaseonblockhit) {
                 GameSystem.changeSpeedBy(-speedincreaseonblockhit);
+                }
             }
             Debug.Log("collided with colorblock");
         }

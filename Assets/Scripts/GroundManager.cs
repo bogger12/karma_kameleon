@@ -17,10 +17,12 @@ public class GroundManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (latestGroundObject.transform.position.x < 8) {
-            spawnGround();
-        };
-        GameSystem.moveChildren(gameObject, GameSystem.speed * Time.deltaTime);
+        if (!GameSystem.gameIsOver) {
+            if (latestGroundObject.transform.position.x < 8) {
+                spawnGround();
+            };
+            GameSystem.moveChildren(gameObject, GameSystem.speed * Time.deltaTime);
+        }
     }
 
     public void spawnGround() {
