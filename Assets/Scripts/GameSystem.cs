@@ -36,6 +36,7 @@ public static class GameSystem
 
     public static int score = 0; //  Current score of player
 
+    public static bool gameIsOver = false;
 
     public static float speed = 10; // speed that chameleon runs at
 
@@ -58,6 +59,7 @@ public static class GameSystem
         speed += change;
     }
     public static void gameEnd() {
-
+        speed = 0;
+        gameIsOver = true;
     }
 }
