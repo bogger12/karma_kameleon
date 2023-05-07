@@ -14,7 +14,9 @@ public class MonkeyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Crude code to set moneky close to chamelon
-        transform.position = new Vector3(initPos.x + 10 - GameSystem.speed, 0,0);
+        if (!GameSystem.gameIsOver) { 
+            // Crude code to set moneky close to chamelon
+            transform.position = new Vector3(initPos.x + 10 - GameSystem.speed, 0,0);
+        }
     }
 }

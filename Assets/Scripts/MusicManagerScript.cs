@@ -7,7 +7,7 @@ public class MusicManagerScript : MonoBehaviour {
     public AudioSource monsterTheme;
     public double monkeyXPos;
     public double monkeyClosenessFactor;
-    public int musicKickInLimit = 6; //higher value means monster theme will kick in at a further distance from monkey
+    public int musicKickInLimit = 8; //higher value means monster theme will kick in at a further distance from monkey
     void Start() {
         mainMusic.volume = 1;
         monsterTheme.volume = 0;

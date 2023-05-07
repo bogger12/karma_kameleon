@@ -56,7 +56,7 @@ public static class GameSystem
     }
 
     public static void changeSpeedBy(float change) {
-        speed += change;
+        if (!GameSystem.gameIsOver) speed += change;
     }
     public static void gameEnd() {
         speed = 0;

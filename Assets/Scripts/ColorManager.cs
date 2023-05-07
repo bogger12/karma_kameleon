@@ -18,13 +18,14 @@ public class ColorManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (timer >= blockSpawnPeriod) {
-            makeColorBlock();
-            timer = 0;
+        if (!GameSystem.gameIsOver) { 
+            if (timer >= blockSpawnPeriod) {
+                makeColorBlock();
+                timer = 0;
+            }
+            else timer += Time.deltaTime;
+            GameSystem.moveChildren(gameObject, GameSystem.speed * Time.deltaTime);
         }
-        else timer += Time.deltaTime;
-        GameSystem.moveChildren(gameObject, GameSystem.speed * Time.deltaTime);
     }
 
     public void makeColorBlock() {

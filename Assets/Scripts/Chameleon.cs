@@ -90,7 +90,7 @@ public class Chameleon : MonoBehaviour
             }
             if (addpoint) {
                 GameSystem.addToScore(scoretext.GetComponent<TMP_Text>(), 1);
-                GameSystem.changeSpeedBy(GameSystem.increaseonblockhit);
+                GameSystem.changeSpeedBy(GameSystem.speedincreaseonblockhit);
                 correctBlockSound.Play();
             } else {
                 float speedincreaseonblockhit = 2;
