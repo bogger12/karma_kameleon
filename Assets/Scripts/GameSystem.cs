@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 //public struct BlockColors {
 
@@ -70,6 +71,7 @@ public static class GameSystem
     }
     public static void gameEnd() {
         speed = 0;
+        score = 0;
         gameIsOver = true;
         gameOverLayer0 = GameObject.FindGameObjectWithTag("GameOverL0");
         gameOverLayer1 = GameObject.FindGameObjectWithTag("GameOverL1");
