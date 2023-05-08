@@ -17,7 +17,7 @@ public class Chameleon : MonoBehaviour
 
     public SpriteRenderer spriteRenderer;
 
-    //public BoxCollider2D chameleonCBox;
+    public UpdateScript Manager;
 
     public Color chameleonGreen;
     public Color chameleonBlue;
@@ -76,12 +76,12 @@ public class Chameleon : MonoBehaviour
             bool addpoint = false;
             switch (colorstate) {
                 case ChameleonColor.GREEN:
-                    if (colorofcollision.Equals(BlockColors.green)) {
+                    if (colorofcollision.Equals(Manager.BlockGreen)) {
                         addpoint = true;
                     }
                     break;
                 case ChameleonColor.BLUE:
-                    if (colorofcollision.Equals(BlockColors.blue)) {
+                    if (colorofcollision.Equals(Manager.BlockBlue)) {
                         addpoint = true;
                     }
                     break;
@@ -93,7 +93,7 @@ public class Chameleon : MonoBehaviour
             } else {
                 float speedincreaseonblockhit = 2;
                 if (GameSystem.speed > speedincreaseonblockhit) {
-                GameSystem.changeSpeedBy(-GameSystem.speedincreaseonblockhit);
+                GameSystem.changeSpeedBy(-GameSystem.speeddecreaseonblockhit);
                 }
             }
             //Debug.Log("collided with colorblock");

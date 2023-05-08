@@ -6,6 +6,12 @@ using TMPro;
 
 public class UpdateScript : MonoBehaviour
 {
+    public Color32 BlockGreen = new Color32(54, 227, 66, 140);
+    public Color32 BlockBlue = new Color32(54, 227, 192, 100);
+    public Color32 BlockGreenBorder = new Color32(20, 100, 33, 140);
+    public Color32 BlockBlueBorder = new Color32(54, 227, 66, 140);
+
+
     public TMP_Text scoretext;
 
     void Start()

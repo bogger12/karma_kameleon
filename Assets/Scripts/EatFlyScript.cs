@@ -51,9 +51,9 @@ public class EatFlyScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Mouth trigger enter");
+        //Debug.Log("Mouth trigger enter");
         if (collision.gameObject.CompareTag("Fly")) {
-            Debug.Log("Collide with fly");
+            //Debug.Log("Collide with fly");
             drawLineFromMouth(collision.gameObject);
         }
     }

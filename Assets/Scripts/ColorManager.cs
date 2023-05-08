@@ -8,6 +8,8 @@ public class ColorManager : MonoBehaviour
 
     public GameObject latestColorBlock;
 
+    public UpdateScript Manager;
+
     public FlyManager flyManager;
 
     public float timer = 0;
@@ -54,9 +56,24 @@ public class ColorManager : MonoBehaviour
         Vector2 blockLocation = new Vector2(posX, posY);
         GameObject penis = Instantiate(colorBlock, blockLocation, transform.rotation, transform);
         // Creates a color bock with these parameters
+
+        int randColor = Random.Range(0, 2);
+        Color32 blockColor = new Color32(0, 0, 0, 0);
+        Color32 borderColor = new Color32(0, 0, 0, 0);
+        switch (randColor) {
+            case 0:
+                blockColor = Manager.BlockGreen;
+                borderColor = Manager.BlockGreenBorder;
+                break;
+            case 1:
+                blockColor = Manager.BlockBlue;
+                borderColor = Manager.BlockBlueBorder;
+                break;
+        }
+
         penis.GetComponent<ColorBlock>().Init(
-            BlockColors.get(Random.Range(0, 2)),
-            BlockColors.black,
+            blockColor,
+            borderColor,
             new Vector2(width, height),
             1
         );
