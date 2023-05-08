@@ -14,6 +14,7 @@ public class Chameleon : MonoBehaviour
     public float floatstrength = 10;
     public AudioSource correctBlockSound;
     public AudioSource deathSound;
+    public AudioSource incorrectBlockSound;
 
     public SpriteRenderer spriteRenderer;
 
@@ -42,10 +43,10 @@ public class Chameleon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space)) {
+        if (Input.GetKey(KeyCode.Space) && !GameSystem.gameIsOver) {
             ChameleonRigidBody.velocity += Vector2.up * floatstrength * Time.deltaTime;
         }
-        if(Input.GetKeyDown(KeyCode.E)) {
+        if(Input.GetKeyDown(KeyCode.E) && !GameSystem.gameIsOver) {
             changeColor();
         }
 
@@ -94,11 +95,12 @@ public class Chameleon : MonoBehaviour
                 float speedincreaseonblockhit = 2;
                 if (GameSystem.speed > speedincreaseonblockhit) {
                 GameSystem.changeSpeedBy(-GameSystem.speeddecreaseonblockhit);
+                incorrectBlockSound.Play();
                 }
             }
             //Debug.Log("collided with colorblock");
         }
-        if (collision.gameObject.CompareTag("Monkey")) {
+        if (!GameSystem.gameIsOver && collision.gameObject.CompareTag("Monkey")) {
             deathSound.Play();
             GameSystem.gameEnd();
             //Debug.Log("collided with monkey");
