@@ -50,6 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offsetMaxValue: 0.25
   moveRadius: 0.25
+  isTounged: 0
 --- !u!95 &2416894481166378306
 Animator:
   serializedVersion: 5
@@ -181,7 +182,7 @@ GameObject:
   - component: {fileID: 6450928970850089803}
   m_Layer: 0
   m_Name: Fly
-  m_TagString: Untagged
+  m_TagString: Fly
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

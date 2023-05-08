@@ -13,7 +13,7 @@ public class ColorManager : MonoBehaviour
     public FlyManager flyManager;
 
     public float timer = 0;
-    public int blockSpawnPeriod = 2;
+    public float blockSpawnPeriod = 2f;
 
     // Start is called before the first frame update
     void Start()
@@ -24,21 +24,25 @@ public class ColorManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!GameSystem.gameIsOver) { 
+        if (!GameSystem.gameIsOver) {
             //if (timer >= blockSpawnPeriod) {
             //    makeColorBlock();
             //    timer = 0;
             //}
             //else timer += Time.deltaTime;
+            if (blockSpawnPeriod > 0.5f) blockSpawnPeriod -= Time.deltaTime / 100;
+
+
             GameSystem.moveChildren(gameObject, GameSystem.speed * Time.deltaTime);
             if (latestColorBlock)
 
-            if (latestColorBlock.transform.position.x < transform.position.x) {
-                latestColorBlock = makeColorBlock(
-                    (Vector2)latestColorBlock.transform.position + latestColorBlock.GetComponent<ColorBlock>().localcenterPos
-                );
-            }
+                if (latestColorBlock.transform.position.x < transform.position.x) {
+                    latestColorBlock = makeColorBlock(
+                        (Vector2)latestColorBlock.transform.position + latestColorBlock.GetComponent<ColorBlock>().localcenterPos
+                    );
+                }
         }
+        else blockSpawnPeriod = 2f;
     }
 
     public GameObject makeColorBlock(Vector2 orig) {

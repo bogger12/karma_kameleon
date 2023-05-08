@@ -42,7 +42,7 @@ public class EatFlyScript : MonoBehaviour
                 toungueTimer -= Time.deltaTime;
             }
 
-            flyObject.transform.position = transform.position + (toungueTimer / toungueTimeOut) * flyDistance;
+            if ((toungueTimer / toungueTimeOut)>=0f) flyObject.transform.position = transform.position + (toungueTimer / toungueTimeOut) * flyDistance;
             Vector3[] positions = new Vector3[] { transform.position, flyObject.transform.position };
             lineRenderer.SetPositions(positions);
         }

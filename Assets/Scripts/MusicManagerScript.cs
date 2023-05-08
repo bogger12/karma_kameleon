@@ -8,8 +8,10 @@ public class MusicManagerScript : MonoBehaviour {
     public double monkeyXPos;
     public double monkeyClosenessFactor;
     public int musicKickInLimit = 8; //higher value means monster theme will kick in at a further distance from monkey
+
+    public float mainvolume;
     void Start() {
-        mainMusic.volume = 1;
+        mainvolume = mainMusic.volume;
         monsterTheme.volume = 0;
         mainMusic.Play();
         monsterTheme.Play();
@@ -26,8 +28,8 @@ public class MusicManagerScript : MonoBehaviour {
             } else {
                 monkeyClosenessFactor = 0;
             }
-            mainMusic.volume = 1 - (float)monkeyClosenessFactor;
-            monsterTheme.volume = (float)monkeyClosenessFactor;
+            mainMusic.volume = (1 - (float)monkeyClosenessFactor) * mainvolume;
+            monsterTheme.volume = (float)monkeyClosenessFactor * mainvolume;
         }
     }
 }

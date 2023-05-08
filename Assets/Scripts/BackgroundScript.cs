@@ -40,7 +40,7 @@ public class BackgroundScript : MonoBehaviour
             foreach (Transform child in gameObject.transform) {
                 //print("Foreach loop: " + child + distance.ToString());
                 GameObject gobject = child.gameObject;
-                Debug.Log(gobject.name);
+                //Debug.Log(gobject.name);
                 switch (child.gameObject.tag) {
                     case "bg1":
                         if (bg1.transform.position.x <= 0) { spawnBG(ref bg1, bg1_prefab); };

@@ -39,7 +39,7 @@ public static class GameSystem
 
     public static float speed = 10; // speed that chameleon runs at
 
-    public static float speedincreaseonblockhit = 1f;
+    public static float speedincreaseonblockhit = 1.5f;
     public static float speeddecreaseonblockhit = 0.5f;
 
 
@@ -48,7 +48,9 @@ public static class GameSystem
     public static GameObject gameOverLayer0;
     public static GameObject gameOverLayer1;
 
-    public static int sceneLength = 5;
+    public static int sceneLength = 8;
+
+    public static float animspeed = 0.1f;
 
 
     public static void moveChildren(GameObject gameobj, float distance) {
