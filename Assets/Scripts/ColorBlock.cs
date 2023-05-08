@@ -9,6 +9,7 @@ public class ColorBlock : MonoBehaviour {
     //public int borderWidth = 1;
     public Color32 color;
 
+    public Vector2 localcenterPos;
 
     // A stand-in for a constructor - initialises object variables
     public void Init(Color32 blockColor, Color32 borderColor, Vector2 size, int borderWidth) {
@@ -19,7 +20,8 @@ public class ColorBlock : MonoBehaviour {
         // Set the sprite of this gameObject based on the parameters set
         GetComponent<SpriteRenderer>().sprite = CreateBlockSprite(blockColor, (int)size.x, (int)size.y, borderColor, borderWidth);
         gameObject.GetComponent<BoxCollider2D>().size = size/ GameSystem.PixelsPerUnit;
-        gameObject.GetComponent<BoxCollider2D>().offset = size / (GameSystem.PixelsPerUnit*2); // Centering box about the center of block
+        gameObject.GetComponent<BoxCollider2D>().offset = (size / 2) / GameSystem.PixelsPerUnit; // Centering box about the center of block
+        localcenterPos = (size / 2) / GameSystem.PixelsPerUnit;
     }
     public void Init(Color32 blockColor, Vector2 size) {
         //this.blockColor = blockColor;
@@ -27,7 +29,8 @@ public class ColorBlock : MonoBehaviour {
         // Set the sprite of this gameObject based on the parameters set
         GetComponent<SpriteRenderer>().sprite = CreateBlockSprite(blockColor, (int)size.x, (int)size.y);
         gameObject.GetComponent<BoxCollider2D>().size = size / GameSystem.PixelsPerUnit;
-        gameObject.GetComponent<BoxCollider2D>().offset = size / (GameSystem.PixelsPerUnit*2); // Centering box about the center of block
+        gameObject.GetComponent<BoxCollider2D>().offset = (size/2) / GameSystem.PixelsPerUnit; // Centering box about the center of block
+        localcenterPos = (size / 2) / GameSystem.PixelsPerUnit;
     }
 
     // Start is called before the first frame update

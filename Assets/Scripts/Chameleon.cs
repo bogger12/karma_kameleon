@@ -18,12 +18,10 @@ public class Chameleon : MonoBehaviour
 
     public SpriteRenderer spriteRenderer;
 
-    //public BoxCollider2D chameleonCBox;
+    public UpdateScript Manager;
 
     public Color chameleonGreen;
     public Color chameleonBlue;
-
-    public GameObject scoretext;
 
     private ChameleonColor colorstate = ChameleonColor.GREEN;
 
@@ -72,40 +70,40 @@ public class Chameleon : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("collision occur");
+        //Debug.Log("collision occur");
         if (collision.gameObject.CompareTag("ColorBlock")) { 
             Color32 colorofcollision = collision.gameObject.GetComponent<ColorBlock>().color;
 
             bool addpoint = false;
             switch (colorstate) {
                 case ChameleonColor.GREEN:
-                    if (colorofcollision.Equals(BlockColors.green)) {
+                    if (colorofcollision.Equals(Manager.BlockGreen)) {
                         addpoint = true;
                     }
                     break;
                 case ChameleonColor.BLUE:
-                    if (colorofcollision.Equals(BlockColors.blue)) {
+                    if (colorofcollision.Equals(Manager.BlockBlue)) {
                         addpoint = true;
                     }
                     break;
             }
             if (addpoint) {
-                GameSystem.addToScore(scoretext.GetComponent<TMP_Text>(), 1);
+                GameSystem.addToScore(10);
                 GameSystem.changeSpeedBy(GameSystem.speedincreaseonblockhit);
                 correctBlockSound.Play();
             } else {
                 float speedincreaseonblockhit = 2;
                 if (GameSystem.speed > speedincreaseonblockhit) {
-                GameSystem.changeSpeedBy(-GameSystem.speedincreaseonblockhit);
+                GameSystem.changeSpeedBy(-GameSystem.speeddecreaseonblockhit);
                 incorrectBlockSound.Play();
                 }
             }
-            Debug.Log("collided with colorblock");
+            //Debug.Log("collided with colorblock");
         }
         if (!GameSystem.gameIsOver && collision.gameObject.CompareTag("Monkey")) {
             deathSound.Play();
             GameSystem.gameEnd();
-            Debug.Log("collided with monkey");
+            //Debug.Log("collided with monkey");
         }
     }
 

@@ -3,30 +3,29 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public struct BlockColors {
-    //public readonly Color32 green;
+//public struct BlockColors {
 
-    public static Color32 green {
-        get { return new Color32(54, 227, 66, 140); }
-    }
-    public static Color32 blue {
-        get { return new Color32(54, 227, 192, 100); }
-    }
-    public static Color32 black {
-        get { return new Color32(0, 0, 0, 50); }
-    }
+//    public static Color32 green {
+//        get { return new Color32(54, 227, 66, 140); }
+//    }
+//    public static Color32 blue {
+//        get { return new Color32(54, 227, 192, 100); }
+//    }
+//    public static Color32 black {
+//        get { return new Color32(0, 0, 0, 50); }
+//    }
 
-    public static Color32 get(int index) {
-        switch (index) {
-            case 0:
-                return green;
-            case 1:
-                return blue;
-            default:
-                return black;
-        }
-    }
-}
+//    public static Color32 get(int index) {
+//        switch (index) {
+//            case 0:
+//                return green;
+//            case 1:
+//                return blue;
+//            default:
+//                return black;
+//        }
+//    }
+//}
 
 
 public static class GameSystem
@@ -40,7 +39,11 @@ public static class GameSystem
 
     public static float speed = 10; // speed that chameleon runs at
 
-    public static float speedincreaseonblockhit = 2f;
+    public static float speedincreaseonblockhit = 1f;
+    public static float speeddecreaseonblockhit = 0.5f;
+
+
+    public static TMP_Text scoreTextMesh;
 
     public static GameObject gameOverLayer0;
     public static GameObject gameOverLayer1;
@@ -55,9 +58,9 @@ public static class GameSystem
         }
     }
 
-    public static void addToScore(TMP_Text textMesh, int scoretoadd) {
+    public static void addToScore(int scoretoadd) {
         score += scoretoadd;
-        textMesh.text = string.Format("Score: {0}", score);
+        scoreTextMesh.text = string.Format("Score: {0}", score);
     }
 
     public static void changeSpeedBy(float change) {

@@ -8,6 +8,11 @@ TagManager:
   - Monkey
   - GameOverL1
   - GameOverL0
+  - Fly
+  - bg1
+  - bg2
+  - bg3
+  - bg4
   layers:
   - Default
   - TransparentFX
