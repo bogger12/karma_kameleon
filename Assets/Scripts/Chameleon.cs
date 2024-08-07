@@ -89,12 +89,12 @@ public class Chameleon : MonoBehaviour
             }
             if (addpoint) {
                 GameSystem.addToScore(10);
-                GameSystem.changeSpeedBy(GameSystem.speedincreaseonblockhit);
+                GameSystem.changeSpeedBy((GameSystem.speedincreaseonblockhit / GameSystem.speed) *10);
                 correctBlockSound.Play();
             } else {
                 float speedincreaseonblockhit = 2;
                 if (GameSystem.speed > speedincreaseonblockhit) {
-                GameSystem.changeSpeedBy(-GameSystem.speeddecreaseonblockhit);
+                GameSystem.changeSpeedBy((-GameSystem.speeddecreaseonblockhit*GameSystem.speed)/5f);
                 incorrectBlockSound.Play();
                 }
             }

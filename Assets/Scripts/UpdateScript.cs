@@ -28,9 +28,10 @@ public class UpdateScript : MonoBehaviour
         GameSystem.changeSpeedBy(-speeddecreasepersecond * Time.deltaTime);
         //Debug.Log(GameSystem.speed);
 
-        if (Input.GetKeyDown(KeyCode.R)) { // Reload to start
-           SceneManager.LoadScene("GameScene");
+        if (Input.GetKeyDown(KeyCode.R) && GameSystem.gameIsOver) { // Reload to start
+           SceneManager.LoadScene("TitleScreen");
            GameSystem.gameIsOver = false;
+            GameSystem.score = 0;
            GameSystem.speed = 10;
         }
     }
